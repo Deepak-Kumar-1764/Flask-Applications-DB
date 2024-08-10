@@ -1,0 +1,63 @@
+body {
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: wheat;
+}
+body .content {
+  max-width: 600px;
+  margin: 50px auto;
+  padding: 40px;
+  background-color: #fff;
+  border-radius: 30px;
+  box-shadow: 20px 10px 50px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+body h1 {
+  color: #0056b3;
+}
+body h4 {
+  color: #666;
+}
+body table {
+  width: 100%;
+  margin-top: 20px;
+  border-collapse: collapse;
+}
+body table th,
+body table td {
+  padding: 10px;
+  border: 1px solid #ccc;
+}
+body table th th,
+body table td th {
+  background-color: #f0f0f0;
+  color: #333;
+}
+body a {
+  display: inline-block;
+  padding: 8px 16px;
+  margin: 5px;
+  border-radius: 12px;
+  background-color: #007bff;
+  color: #fff;
+  text-decoration: none;
+  transition: background-color 0.3s ease;
+}
+body a:hover {
+  background-color: #0056b3;
+}
+body input {
+  padding: 10px;
+  margin: 5px;
+  border: solid 1px;
+  border-radius: 5px;
+}
+body #btn_add {
+  background-color: #28a745;
+  color: #fff;
+  cursor: pointer;
+}
+body #btn_add:hover {
+  background-color: #218838;
+}/*# sourceMappingURL=styles.css.map */
