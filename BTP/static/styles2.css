@@ -1,0 +1,86 @@
+body {
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: white;
+}
+
+body h1 {
+  color: #0d0267;
+  font-size: 50px;
+  margin-top: 13px;
+}
+
+.messages {
+margin-top: -10px;
+list-style-type: none;
+padding: 0;
+}
+
+body .image{
+  margin-top: 30px;
+}
+img {
+ width:170px;
+ height:170px;
+ margin-bottom: 40px;
+ margin-top: 40px;
+}
+
+/* styles.css */
+.messages span.error {
+font-size: larger;
+color: red;
+}
+
+.messages span.success {
+font-size: larger;
+color: rgb(96, 154, 10);
+}
+
+body .content{
+  background-color: wheat;
+  width: 750px;
+  height: 250px;
+  margin-top: 0px;
+  border-radius: 10px;
+} 
+
+form input[type="text"] {
+  border: 1px solid #ddd;
+  padding: 10px;
+  border-radius: 5px;
+  margin-top: -13px;
+  width: calc(80% - 22px);
+  border-color: rgb(10, 81, 255);
+}
+
+ form input[type="submit"] {
+  background-color: #0d0267;
+  border: none;
+  color: #fff;
+  width: calc(10% - 22px);
+
+  position: absolute;
+  padding: 7px;
+  margin-top: 70px ;
+  margin-left: -380px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+
+}
+
+form input[type="submit"]:hover {
+  background-color: #310693;
+}
+
+/* Logout button styling */
+body #logout {
+  position: absolute;
+  font-size: larger;
+  top: 25px;
+  right: 30px;
+}
+
+

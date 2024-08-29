@@ -1,0 +1,32 @@
+{% extends "base.html" %}
+
+{% block body %}
+
+
+<div class="container">
+   
+    <h1 class="log">Login</h1>
+    
+    <form id="auth_form" action="{{ url_for('login') }}" method="post">
+        <input type="text" name="username" placeholder="Username" class="input-field" required />
+        <input type="password" name="password" placeholder="Password" class="input-field" required />
+        <input type="submit" value="Submit" class="btn btn-login" />
+    </form>
+
+    {% with messages = get_flashed_messages(with_categories=true) %}
+    {% if messages %}
+        <div class="messages">
+            {% for category, message in messages %}
+              {% if category == 'error' %}
+              <p style="color: red;">{{ message }}</p>
+              {% elif category == 'success' %}
+             <p style="color: green;">{{ message }}</p>
+            {% endif %}
+            {% endfor %}
+        </div>
+    {% endif %}
+    {% endwith %}
+
+    <p>Don't have an account? <a href="{{ url_for('register') }}">Register here</a></p>
+</div>
+{% endblock %}

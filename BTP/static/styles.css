@@ -1,0 +1,135 @@
+body {
+  background-color: #f0f8ff;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  color: #333;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+  text-align: center;
+}
+
+header {
+  width: 100%;
+  background-color: #ffffff;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  padding: 20px 0;
+}
+header h1 {
+  margin: 0;
+  font-size: 2.5rem;
+  color: #333;
+}
+
+main {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex: 1;
+  width: 100%;
+}
+
+.container {
+  background-color: #ffffff;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  padding: 30px;
+  max-width: 400px;
+  width: 100%;
+  margin: 50px auto;
+}
+.container h1 {
+  font-size: 2.5rem;
+  color: #333;
+  margin-bottom: 1.5rem;
+}
+.container p {
+  font-size: 18px;
+  color: #666;
+  margin-bottom: 20px;
+}
+.container .input-field {
+  width: 100%;
+  padding: 8px;
+  margin: 10px 0;
+
+  border: 1px solid  #0d0267;
+  border-radius: 4px;
+  font-size: 1rem;
+  box-sizing: border-box;
+}
+.container .input-field:focus {
+  border-color: rgb(79, 79, 245);
+  outline: none;
+}
+.container .btn {
+  width: 100%;
+  padding: 10px;
+  margin: 10px 0;
+  border: none;
+  border-radius: 4px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: #f0f8ff 0.3s ease;
+}
+.container .btn.btn-login {
+  background-color:  #0d0267;
+  color: #fff;
+  width: 100px;
+}
+.container .btn.btn-login:hover {
+  background-color: rgb(79, 79, 245);
+}
+.container .btn.btn-register {
+  background-color: #28a745;
+  color: #fff;
+}
+.container .btn.btn-register:hover {
+  background-color: #218838;
+}
+.container .btn.btn-logout {
+  background-color: rgb(79, 79, 245);
+  color: #fff;
+}
+.container .btn.btn-logout:hover {
+  background-color: #0056b3;
+}/*# sourceMappingURL=styles.css.map */
+body .log {
+  color:  #0d0267;
+}
+
+
+.flash-messages {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  padding: 10px;
+  background-color: #f8f9fa;
+  border-bottom: 1px solid #ccc;
+  z-index: 1000;
+  text-align: center;
+}
+
+.flash {
+  margin: 0;
+  padding: 10px;
+  border-radius: 4px;
+  display: inline-block;
+}
+
+.flash.info {
+  color: #31708f;
+  background-color: #d9edf7;
+  border-color: #bce8f1;
+}
+
+.flash.error {
+  color: #a94442;
+  background-color: #f2dede;
+  border-color: #ebccd1;
+}
+
+/* Add additional styles for different flash message categories as needed */
+

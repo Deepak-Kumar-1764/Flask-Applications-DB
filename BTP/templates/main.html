@@ -1,0 +1,35 @@
+{% extends "base.html" %}
+
+{% block head %}
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles2.css') }}">
+{% endblock %}
+
+{% block body %}
+<a href="{{ url_for('logout') }}" id = "logout" class="btn btn-primary">Logout</a>
+
+<div class="image">
+    <img src="https://th.bing.com/th/id/R.f17e6a29520b758bd1feefcf0540abc9?rik=Ost4zL%2fsV8hAIA&riu=http%3a%2f%2fiitgoa.ac.in%2fwp-content%2fuploads%2fIIT-Goa-Logo-scaled.jpg&ehk=zx4xzY13Ec7znFzDX4ms4a%2bfaYqSDwlJO%2fHZX1O4U08%3d&risl=&pid=ImgRaw&r=0" alt="Centered Image">
+</div>
+
+<div class="content">
+    <h1>AcadBot 2.0</h1>
+    <form action="{{ url_for('store') }}" method="POST">
+        <input type="text" name="content" id="content1" placeholder="Type here..."/>
+        <input type="submit" value="STORE DATA" id="btn_add" />
+        <p id="message" class="flase">
+            {% with messages = get_flashed_messages(with_categories=true) %}
+            {% if messages %}
+                <div class="messages">
+                    {% for category, message in messages %}
+                        <span class="{{ category }}">{{ message }}</span>
+                    {% endfor %}
+                </div>
+            {% endif %}
+            {% endwith %}
+        </p>
+    </form>
+    
+</div>
+
+
+{% endblock %}
