@@ -1,0 +1,51 @@
+{% extends "base.html" %}
+
+{% block head %}
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles2.css') }}">
+{% endblock %}
+
+{% block body %}
+<a href="{{ url_for('logout') }}" id="logout" class="btn btn-primary">Logout</a>
+
+<div class="image1">
+    <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgEwj65BUjINXFR6CPBhNvCSVUIU_yYgPTYkSWFuBzlkuzFcmu9kNZdQOr9GkOKxQ_vB64heX0e32bNPX2n1AuWMO8DoIDAcscRP73j9gHk-CvGUaOHwJ4qyY6KH6CzZiBmDmZrU7kCHMc0pJH4w-O9Qan4pUD9pi4sydRU7f9pi66lAHNRk2KTDRJk/s507/Indian%20Institute%20of%20Technology%20Goa.png" alt="">
+</div>
+
+<div class="content1">
+    <h1>AcadBot 2.0</h1>
+    <div class="chat-box">
+        <div class="messages1">
+            {% for q in qa %}
+                <div class="message question">
+                    <strong>You:</strong> {{ q.text }}
+                </div>
+                <div class="message answer">
+                    <strong>Bot:</strong> {{ q.answer }}
+                </div>
+            {% endfor %}
+        </div>
+    </div>
+
+    <form action="{{ url_for('chat') }}" method="POST" class="chat-form">
+        <input type="text" name="question" placeholder="Your question" required>
+        <button type="submit" class="btn btn-primary">Submit</button>
+    </form>
+</div>
+
+<!-- JavaScript to automatically scroll to the bottom of the chat box -->
+<script>
+    function scrollToBottom() {
+        var chatBox = document.querySelector('.chat-box');
+        chatBox.scrollTop = chatBox.scrollHeight;
+    }
+
+    // Scroll to the bottom on page load
+    window.onload = scrollToBottom;
+
+    // Scroll to the bottom whenever a new message is added
+    document.querySelector('.chat-form').addEventListener('submit', function() {
+        setTimeout(scrollToBottom, 100); // Delay to ensure the message is added
+    });
+</script>
+
+{% endblock %}
